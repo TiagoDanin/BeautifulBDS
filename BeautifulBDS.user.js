@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BeautifulBDS
 // @namespace    https://tiagodanin.github.io/BeautifulBDS
-// @version      1.0
+// @version      1.1
 // @description  Hello!
 // @author       Tiago Danin (https://github.com/TiagoDanin)(Telegram:@TiagoDanin)
 // @match        http://bancodeseries.com.br/*
@@ -192,7 +192,7 @@ table {
 }
 td,
 th {
-	padding: 0
+	padding: 1%
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 
@@ -6268,6 +6268,9 @@ button.close {
 	style.appendChild(document.createTextNode(css));
 	var body = document.getElementsByTagName("body");
 	body[0].appendChild(style);
+	document.getElementsByTagName("img")[0].src = "https://image.flaticon.com/icons/png/128/254/254010.png";
+	document.getElementsByTagName("img")[0].width = "20";
+	document.getElementsByTagName("img")[0].style = "border-radius: 0;";
 	document.getElementsByClassName("navbar")[0].style.position="Fixed";
 	var content = document.getElementsByClassName("container-fluid")[0];
 	document.addEventListener('keydown', function(e) {
@@ -6303,4 +6306,18 @@ button.close {
 			}
 		}
 	});
+	var nav = document.getElementsByClassName("nav")[0];
+	var breadcrumb = document.getElementsByClassName("breadcrumb")[0];
+	for (var i = 0; i < 2; i++) {
+		var grupoMenu = document.createElement("li");
+		var grupoUrl = document.createElement("a");
+		var grupoImg = document.createElement("img");
+		grupoUrl.href = breadcrumb.getElementsByTagName("a")[i].href;
+		//grupoUrl.textContent = ((breadcrumb.getElementsByTagName("small")[i]).getElementsByTagName("font")[0]).textContent;
+		grupoImg.src = "images/groups/" + (breadcrumb.getElementsByTagName("a")[i].href).replace("http://bancodeseries.com.br/index.php?action=group&gid=", "") + ".jpg";
+		grupoImg.width = "20";
+		grupoUrl.appendChild(grupoImg);
+		grupoMenu.appendChild(grupoUrl);
+		nav.appendChild(grupoMenu);
+	}
 })();

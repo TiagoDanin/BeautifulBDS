@@ -18,10 +18,10 @@ Ctrl + g | Adicionar/Cancelar da minha grade |
 Ctrl + p | Adicionar/Remove da Geladeira |
 Ctrl + m | Iniciar/Finalizar Maratona |
 
-# Falta
 Atalhos na barra de navegação
 - Grupos
 
+# Falta
 Atalhos no ep de uma série
 - Busca legenda
 
