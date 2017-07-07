@@ -9,7 +9,7 @@ Vivaldi
 4. Pronto seja feliz :)
 5. [Ir para o BancoDeSéries](http://bancodeseries.com.br)
 
-# Atalhos
+# Atalhos & Funções
 - [x] Teclado:
 
 Teclas | Atalho |
@@ -37,5 +37,9 @@ Notificação
 - [ ] Solicitação de amizade
 - [ ] Novo badge
  
+--------------------
+- [ ] Feito
+- [X] Em Breve :)
+
 --------------------
 Aceito novas sugestões [aqui](https://github.com/TiagoDanin/BeautifulBDS/issues/new) ou no [Telegram](https://t.me/TiagoDanin)
