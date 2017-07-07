@@ -21,12 +21,17 @@ Ctrl + m | Iniciar/Finalizar Maratona |
 Atalhos na barra de navegação
 - Grupos
 
+Modificações visual
+- Lista de admins em um grupo (Apenas nos grupos Legends e House)
+
 # Falta
+Modificações visual
+- Lista de admins em um grupo (Falta outro grupos do BDS)
+
 Atalhos no ep de uma série
 - Busca legenda
 
 Modificações visual
-- Estrela no admin de um grupo
 - Logo com fundo transparente
 - Modo noite
 

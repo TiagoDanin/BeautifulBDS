@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BeautifulBDS
 // @namespace    https://tiagodanin.github.io/BeautifulBDS
-// @version      1.1
+// @version      1.2
 // @description  Hello!
 // @author       Tiago Danin (https://github.com/TiagoDanin)(Telegram:@TiagoDanin)
 // @match        http://bancodeseries.com.br/*
@@ -6319,5 +6319,27 @@ button.close {
 		grupoUrl.appendChild(grupoImg);
 		grupoMenu.appendChild(grupoUrl);
 		nav.appendChild(grupoMenu);
+	}
+	var url = window.location.href;
+	var idGrupo = url.replace("http://bancodeseries.com.br/index.php?action=group&gid=", "");
+	if (idGrupo.length == 1) {
+		if (content) {
+			var spanTwo = content.getElementsByClassName("span2")[0];
+			if (spanTwo) {
+				if (idGrupo == "5") { //Legends Of BDS
+					var adminGrupo = `Admin do grupo</b>
+					<br><strong><small><a href="index.php?action=userPage&amp;uid=1000001012"><font color="green">Grazi Azevedo</font></a></small><hr>
+					</strong><b>Meus Grupos</b>`;
+					spanTwo.innerHTML = (spanTwo.innerHTML).replace("Meus Grupos", adminGrupo);
+				} else if (idGrupo == "4") { //House of BDS
+					var adminGrupo = `Admins do grupo</b>
+					<br><strong><small><a href="index.php?action=userPage&amp;uid=1000038754"><font color="green">Jefferson Fernandes</font></a></small>
+					<br><strong><small><a href="index.php?action=userPage&amp;uid=1000123508"><font color="green">Manoel Barreto</font></a></small>
+					<br><strong><small><font color="green">Ju</font></a></small><hr>
+					</strong><b>Meus Grupos</b>`;
+					spanTwo.innerHTML = (spanTwo.innerHTML).replace("Meus Grupos", adminGrupo);
+				}
+			}
+		}
 	}
 })();
