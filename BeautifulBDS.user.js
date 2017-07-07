@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BeautifulBDS
 // @namespace    https://tiagodanin.github.io/BeautifulBDS
-// @version      1.2
+// @version      1.2.1
 // @description  Hello!
 // @author       Tiago Danin (https://github.com/TiagoDanin)(Telegram:@TiagoDanin)
 // @match        http://bancodeseries.com.br/*
@@ -6263,6 +6263,51 @@ button.close {
 	border-color: #d13f19;
 }
 `;
+	var themeDark = document.cookie.includes("ThemeDark");
+	if (themeDark) {
+		css += `
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #f3f3f3;
+    background-color: #222;
+}
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 5px;
+    margin-top: 40px;
+    list-style: none;
+    background-color: #333;
+    border-radius: 4px;
+}
+a {
+    color: #459da2;
+    text-decoration: none;
+}
+
+.breadcrumb>li {
+    display: inline-block;
+    text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+}
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #222222;
+    border: 1px solid #389da2;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.accordion-group {
+    margin-bottom: 2px;
+    border: 0px solid #e5e5e5;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}`;
+	}
 	var style = document.createElement("style");
 	style.type = "text/css";
 	style.appendChild(document.createTextNode(css));
@@ -6273,8 +6318,29 @@ button.close {
 	document.getElementsByTagName("img")[0].style = "border-radius: 0;";
 	document.getElementsByClassName("navbar")[0].style.position="Fixed";
 	var content = document.getElementsByClassName("container-fluid")[0];
+	var accordionHeading = document.getElementsByClassName("accordion-heading");
+	if (themeDark && accordionHeading) {
+		for (var i = 0; i < accordionHeading.length; i++) {
+			accordionHeading[i].style = "background-color: #d2d2d2;";
+		}
+	}
+	var accordionBody = document.getElementsByClassName("accordion-body");
+	if (themeDark && accordionBody) {
+		for (var i = 0; i < accordionBody.length; i++) {
+			accordionBody[i].style = "background-color: #333;";
+		}
+	}
+	document.cookie = "ThemeDark; expires=Thu, 01 Jan 1500 00:00:01 GMT; path=/";
 	document.addEventListener('keydown', function(e) {
-		if (content) {
+		if (e.ctrlKey && e.keyCode == 78) {
+			if (themeDark) { // IF ON -> OFF
+				document.cookie = "ThemeDark; expires=Thu, 01 Jan 1500 00:00:01 GMT; domain=bancodeseries.com.br; path=/";
+				window.location.reload();
+			} else { //IF OFF -> ON
+				document.cookie = "ThemeDark; expires=Thu, 01 Jan 2500 00:00:01 GMT; domain=bancodeseries.com.br; path=/";
+				window.location.reload();
+			}
+		} else if (content) {
 			var serieNaGrade = false;
 			if (content.getElementsByClassName("span2")) {
 				if (content.getElementsByClassName("span2")[0]) {
