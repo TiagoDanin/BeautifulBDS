@@ -10,30 +10,32 @@ Vivaldi
 5. [Ir para o BancoDeSéries](http://bancodeseries.com.br)
 
 # Atalhos
-Teclado
+- [x] Teclado:
 
 Teclas | Atalho |
 -|- |
 Ctrl + g | Adicionar/Cancelar da minha grade |
 Ctrl + p | Adicionar/Remove da Geladeira |
 Ctrl + m | Iniciar/Finalizar Maratona |
+Ctrl + n | Ativa/Desativa Modo noite |
 
 Atalhos na barra de navegação
-- Grupos
+- [x] Grupos
 
 Modificações visual
-- Lista de admins em um grupo (Apenas nos grupos Legends e House)
-
-# Falta
-Modificações visual
-- Lista de admins em um grupo (Falta outro grupos do BDS)
+- [x] Lista de admins em um grupo (Apenas nos grupos Legends e House)
 
 Atalhos no ep de uma série
-- Busca legenda
+- [ ] Busca legenda
 
 Modificações visual
-- Logo com fundo transparente
-- Modo noite
+- [x] Modo noite (Ativa/Desativa Ctrl + n)
+- [ ] Logo com fundo transparente
 
+Notificação
+- [ ] Episodios de hoje
+- [ ] Solicitação de amizade
+- [ ] Novo badge
+ 
 --------------------
 Aceito novas sugestões [aqui](https://github.com/TiagoDanin/BeautifulBDS/issues/new) ou no [Telegram](https://t.me/TiagoDanin)
