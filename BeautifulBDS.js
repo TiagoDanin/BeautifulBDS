@@ -1,15 +1,4 @@
-// ==UserScript==
-// @name         BeautifulBDS
-// @namespace    https://tiagodanin.github.io/BeautifulBDS
-// @version      1.3.0
-// @description  Hello!
-// @author       Tiago Danin (https://github.com/TiagoDanin)(Telegram:@TiagoDanin)
-// @match        http://bancodeseries.com.br/*
-// @grant        none
-// ==/UserScript==
-
 (function() {
-	document.cookie = "BeautifulBDS=1.3.0; expires=Thu, 01 Jan 2500 00:00:01 GMT; domain=bancodeseries.com.br; path=/;";
 	var css = `
 @charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -6364,16 +6353,16 @@ a {
 		});
 	};
 	document.addEventListener('keydown', function(e) {
-		if (e.ctrlKey && e.keyCode == 90) {
-			// Ctrl + z
+		if (e.ctrlKey && e.keyCode == 72) {
+			// Ctrl + h
 			NotificSeries();
 		} else if (e.ctrlKey && e.keyCode == 78) {
 			// Ctrl + n
 			if (themeDark) { // IF ON -> OFF
-				document.cookie += "ThemeDark; expires=Thu, 01 Jan 1500 00:00:01 GMT; domain=bancodeseries.com.br; path=/;";
+				document.cookie = "ThemeDark=true; expires=Thu, 01 Jan 1500 00:00:01 GMT; domain=bancodeseries.com.br; path=/;";
 				window.location.reload();
 			} else { //IF OFF -> ON
-				document.cookie += "ThemeDark; expires=Thu, 01 Jan 2500 00:00:01 GMT; domain=bancodeseries.com.br; path=/;";
+				document.cookie = "ThemeDark=true; expires=Thu, 01 Jan 2500 00:00:01 GMT; domain=bancodeseries.com.br; path=/;";
 				window.location.reload();
 			}
 		} else if (content) {
@@ -6450,7 +6439,7 @@ a {
 		DateCookie.setDate(DateCookie.getDate() + 1); // +1 Dia
 		DateCookie.setHours(0);
 		DateCookie.setMinutes(0);
-		document.cookie += "notificCheckDay; expires=" + DateCookie.toGMTString() + "; domain=bancodeseries.com.br; path=/;";
+		document.cookie = "notificCheckDay=true; expires=" + DateCookie.toGMTString() + "; domain=bancodeseries.com.br; path=/;";
 		NotificSeries();
 	}
 })();
