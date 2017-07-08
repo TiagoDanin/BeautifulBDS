@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BeautifulBDS
 // @namespace    https://tiagodanin.github.io/BeautifulBDS
-// @version      1.2.1
+// @version      1.3.0
 // @description  Hello!
 // @author       Tiago Danin (https://github.com/TiagoDanin)(Telegram:@TiagoDanin)
 // @match        http://bancodeseries.com.br/*
@@ -9,6 +9,7 @@
 // ==/UserScript==
 
 (function() {
+	document.cookie = "BeautifulBDS=1.3.0; expires=Thu, 01 Jan 2500 00:00:01 GMT; domain=bancodeseries.com.br; path=/;";
 	var css = `
 @charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -6267,45 +6268,45 @@ button.close {
 	if (themeDark) {
 		css += `
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.42857;
-    color: #f3f3f3;
-    background-color: #222;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857;
+	color: #f3f3f3;
+	background-color: #222;
 }
 .breadcrumb {
-    padding: 8px 15px;
-    margin-bottom: 5px;
-    margin-top: 40px;
-    list-style: none;
-    background-color: #333;
-    border-radius: 4px;
+	padding: 8px 15px;
+	margin-bottom: 5px;
+	margin-top: 40px;
+	list-style: none;
+	background-color: #333;
+	border-radius: 4px;
 }
 a {
-    color: #459da2;
-    text-decoration: none;
+	color: #459da2;
+	text-decoration: none;
 }
 
 .breadcrumb>li {
-    display: inline-block;
-    text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+	display: inline-block;
+	text-shadow: 0 0 0 rgba(255, 255, 255, 0);
 }
 .well {
-    min-height: 20px;
-    padding: 19px;
-    margin-bottom: 20px;
-    background-color: #222222;
-    border: 1px solid #389da2;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	min-height: 20px;
+	padding: 19px;
+	margin-bottom: 20px;
+	background-color: #222222;
+	border: 1px solid #389da2;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 .accordion-group {
-    margin-bottom: 2px;
-    border: 0px solid #e5e5e5;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
+	margin-bottom: 2px;
+	border: 0px solid #e5e5e5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }`;
 	}
 	var style = document.createElement("style");
@@ -6330,14 +6331,49 @@ a {
 			accordionBody[i].style = "background-color: #333;";
 		}
 	}
-	document.cookie = "ThemeDark; expires=Thu, 01 Jan 1500 00:00:01 GMT; path=/";
+	function NotificSeries () {
+		$.get("http://bancodeseries.com.br/index.php?action=thisweek", function(data){
+			var doc = document.implementation.createHTMLDocument("");
+			doc.open();
+			doc.write(data);
+			doc.close();
+			var tableGrade = doc.getElementsByTagName("table")[1];
+			if (tableGrade) {
+				var serieHoje = tableGrade.getElementsByClassName("info");
+				for (var i = 0; i < serieHoje.length; i++) {
+					var serienName = (serieHoje[i].getElementsByTagName("td")[2]).getElementsByTagName("a")[0].innerText;
+					var serieEpName = (serieHoje[i].getElementsByTagName("td")[2]).getElementsByTagName("i")[0].innerText;
+					var imgSerie = $(serieHoje[i].getElementsByTagName("td")[1]).attr("background");
+					var urlSerie = (serieHoje[i].getElementsByTagName("td")[2]).getElementsByTagName("a")[0].href;
+					Notification.requestPermission().then(status => {
+						if (status == 'granted') {
+							var notific = new Notification(
+								serienName,
+								{
+									body: serieEpName,
+									icon: imgSerie
+								}
+							);
+							notific.onclick = function (e) {
+			                    window.open(urlSerie);
+			                };
+						}
+					});
+				}
+			}
+		});
+	};
 	document.addEventListener('keydown', function(e) {
-		if (e.ctrlKey && e.keyCode == 78) {
+		if (e.ctrlKey && e.keyCode == 90) {
+			// Ctrl + z
+			NotificSeries();
+		} else if (e.ctrlKey && e.keyCode == 78) {
+			// Ctrl + n
 			if (themeDark) { // IF ON -> OFF
-				document.cookie = "ThemeDark; expires=Thu, 01 Jan 1500 00:00:01 GMT; domain=bancodeseries.com.br; path=/";
+				document.cookie += "ThemeDark; expires=Thu, 01 Jan 1500 00:00:01 GMT; domain=bancodeseries.com.br; path=/;";
 				window.location.reload();
 			} else { //IF OFF -> ON
-				document.cookie = "ThemeDark; expires=Thu, 01 Jan 2500 00:00:01 GMT; domain=bancodeseries.com.br; path=/";
+				document.cookie += "ThemeDark; expires=Thu, 01 Jan 2500 00:00:01 GMT; domain=bancodeseries.com.br; path=/;";
 				window.location.reload();
 			}
 		} else if (content) {
@@ -6407,5 +6443,14 @@ a {
 				}
 			}
 		}
+	}
+	var notificCheckDay = document.cookie.includes("notificCheckDay");
+	if (!notificCheckDay) { // Check do dia
+		var DateCookie = new Date();
+		DateCookie.setDate(DateCookie.getDate() + 1); // +1 Dia
+		DateCookie.setHours(0);
+		DateCookie.setMinutes(0);
+		document.cookie += "notificCheckDay; expires=" + DateCookie.toGMTString() + "; domain=bancodeseries.com.br; path=/;";
+		NotificSeries();
 	}
 })();
