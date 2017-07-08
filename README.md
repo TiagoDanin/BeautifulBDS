@@ -2,7 +2,8 @@
 Um Tema Flat, Limpo e algumas utilidades para o site BancoDeSéries ❤️
 
 # Como instalar
-1. Faça o download da Extensão aqui [aqui](https://github.com/TiagoDanin/BeautifulBDS/raw/master/BeautifulBDS.crx)
+0. Funciona com Chrome, Opera e Vivaldi
+1. Faça o download da Extensão [aqui](https://github.com/TiagoDanin/BeautifulBDS/raw/master/BeautifulBDS.crx)
 2. Segure e araste o arquivo para dentro da pagina de extensão do seu navegador ou [Veja esse Tutorial do Tecmundo](https://www.tecmundo.com.br/tutorial/26055-google-chrome-como-instalar-extensoes-que-nao-estao-na-web-store.htm)
 3. Clique em instalar
 4. Pronto seja feliz :)
