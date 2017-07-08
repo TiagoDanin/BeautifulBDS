@@ -1,4 +1,5 @@
 (function() {
+	var version = "2.0.0";
 	var css = `
 @charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -6350,6 +6351,24 @@ a {
 					});
 				}
 			}
+			$.get("https://github.com/TiagoDanin/BeautifulBDS/raw/master/version", function(data){
+				if (version != data) {
+					Notification.requestPermission().then(status => {
+						if (status == 'granted') {
+							var notific = new Notification(
+								"BeautifulBDS",
+								{
+									body: "Há uma nova versão do BeautifulBDS [CLIQUE AQUI]",
+									icon: "https://image.flaticon.com/icons/png/128/254/254010.png"
+								}
+							);
+							notific.onclick = function (e) {
+			                    window.open("https://github.com/TiagoDanin/BeautifulBDS");
+			                };
+						}
+					});
+				}
+			});
 		});
 	};
 	document.addEventListener('keydown', function(e) {
