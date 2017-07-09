@@ -37,10 +37,23 @@ Notificação
 - [X] Episodios de hoje
 - [ ] Solicitação de amizade
 - [ ] Novo badge
- 
+
 --------------------
 - [ ] Feito
 - [X] Em Breve :)
 
 --------------------
 Aceito novas sugestões [aqui](https://github.com/TiagoDanin/BeautifulBDS/issues/new) ou no [Telegram](https://t.me/TiagoDanin)
+
+--------------------
+# Screenshots
+
+![Screenshots](https://raw.githubusercontent.com/TiagoDanin/BeautifulBDS/master/Screenshots/1IMG.png)
+
+![Screenshots](https://raw.githubusercontent.com/TiagoDanin/BeautifulBDS/master/Screenshots/2IMG.png)
+
+![Screenshots](https://raw.githubusercontent.com/TiagoDanin/BeautifulBDS/master/Screenshots/3IMG.png)
+
+![Screenshots](https://raw.githubusercontent.com/TiagoDanin/BeautifulBDS/master/Screenshots/4IMG.png)
+
+![Screenshots](https://raw.githubusercontent.com/TiagoDanin/BeautifulBDS/master/Screenshots/5IMG.png)
