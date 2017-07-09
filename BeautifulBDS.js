@@ -1,5 +1,5 @@
 (function() {
-	var version = "2.0.0";
+	var version = "2.0.1";
 	var css = `
 @charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -1224,8 +1224,8 @@ pre code {
 	clear: both
 }
 .row {
-	margin-left: -15px;
-	margin-right: -15px
+	margin-left: 1px;
+	margin-right: 1px
 }
 .row:before,
 .row:after {
@@ -2679,8 +2679,8 @@ select[multiple].form-group-lg .form-control {
 	min-height: 27px
 }
 .form-horizontal .form-group {
-	margin-left: -15px;
-	margin-right: -15px
+	margin-left: 1px;
+	margin-right: 1px
 }
 .form-horizontal .form-group:before,
 .form-horizontal .form-group:after {
@@ -3823,8 +3823,8 @@ tbody.collapse.in {
 .container>.navbar-collapse,
 .container-fluid>.navbar-header,
 .container-fluid>.navbar-collapse {
-	margin-right: -15px;
-	margin-left: -15px
+	margin-right: 1px;
+	margin-left: 1px
 }
 @media(min-width:768px) {
 	.container>.navbar-header, .container>.navbar-collapse, .container-fluid>.navbar-header, .container-fluid>.navbar-collapse {
@@ -3878,7 +3878,7 @@ tbody.collapse.in {
 }
 @media(min-width:768px) {
 	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
-		margin-left: -15px
+		margin-left: 1px
 	}
 }
 .navbar-toggle {
@@ -3954,8 +3954,8 @@ tbody.collapse.in {
 	}
 }
 .navbar-form {
-	margin-left: -15px;
-	margin-right: -15px;
+	margin-left: 1px;
+	margin-right: 1px;
 	padding: 10px 15px;
 	border-top: 1px solid transparent;
 	border-bottom: 1px solid transparent;
@@ -4076,7 +4076,7 @@ tbody.collapse.in {
 	}
 	.navbar-right {
 		float: right!important;
-		margin-right: -15px
+		margin-right: 1px
 	}
 	.navbar-right ~ .navbar-right {
 		margin-right: 0
@@ -4441,7 +4441,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .label {
 	display: inline;
 	padding: .2em .6em .3em;
-	font-size: 75%;
+	font-size: 105%;
 	font-weight: bold;
 	line-height: 1;
 	color: #fff;
@@ -5403,16 +5403,25 @@ button.close {
 	overflow: hidden
 }
 .modal {
-	display: none;
-	overflow: hidden;
 	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 1040;
-	-webkit-overflow-scrolling: touch;
-	outline: 0
+	top: 10%;
+	left: 50%;
+	z-index: 1050;
+	width: 560px;
+	margin-left: -280px;
+	background-color: #ffffff;
+	border: 1px solid #999;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+	outline: none;
 }
 .modal.fade .modal-dialog {
 	-webkit-transform: translate(0, -25%);
@@ -5451,10 +5460,11 @@ button.close {
 	outline: 0
 }
 .modal-backdrop {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
 	left: 0;
+	z-index: 0;
 	background-color: #000
 }
 .modal-backdrop.fade {
@@ -5832,10 +5842,10 @@ button.close {
 }
 .carousel-control {
 	position: absolute;
-	top: 0;
+	top: 40%;
 	left: 0;
 	bottom: 0;
-	width: 15%;
+	width: 7%;
 	opacity: .5;
 	filter: alpha(opacity=50);
 	font-size: 20px;
@@ -5950,11 +5960,11 @@ button.close {
 	}
 	.carousel-control .glyphicon-chevron-left,
 	.carousel-control .icon-prev {
-		margin-left: -15px
+		margin-left: 1px
 	}
 	.carousel-control .glyphicon-chevron-right,
 	.carousel-control .icon-next {
-		margin-right: -15px
+		margin-right: 1px
 	}
 	.carousel-caption {
 		left: 20%;
@@ -5985,7 +5995,7 @@ button.close {
 	float: left!important
 }
 .hide {
-	display: none!important
+	display: none
 }
 .show {
 	display: block!important
@@ -6253,6 +6263,10 @@ button.close {
 	background-color: #222;
 	border-color: #d13f19;
 }
+.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+	margin-left: 1px;
+	margin-right: 1px;
+}
 `;
 	var themeDark = document.cookie.includes("ThemeDark");
 	if (themeDark) {
@@ -6307,7 +6321,7 @@ a {
 	document.getElementsByTagName("img")[0].src = "https://image.flaticon.com/icons/png/128/254/254010.png";
 	document.getElementsByTagName("img")[0].width = "20";
 	document.getElementsByTagName("img")[0].style = "border-radius: 0;";
-	document.getElementsByClassName("navbar")[0].style.position="Fixed";
+	document.getElementsByClassName("navbar")[0].style.position = "Fixed";
 	var content = document.getElementsByClassName("container-fluid")[0];
 	var accordionHeading = document.getElementsByClassName("accordion-heading");
 	if (themeDark && accordionHeading) {
@@ -6321,8 +6335,9 @@ a {
 			accordionBody[i].style = "background-color: #333;";
 		}
 	}
-	function NotificSeries () {
-		$.get("http://bancodeseries.com.br/index.php?action=thisweek", function(data){
+
+	function NotificSeries() {
+		$.get("http://bancodeseries.com.br/index.php?action=thisweek", function(data) {
 			var doc = document.implementation.createHTMLDocument("");
 			doc.open();
 			doc.write(data);
@@ -6338,33 +6353,31 @@ a {
 					Notification.requestPermission().then(status => {
 						if (status == 'granted') {
 							var notific = new Notification(
-								serienName,
-								{
+								serienName, {
 									body: serieEpName,
 									icon: imgSerie
 								}
 							);
-							notific.onclick = function (e) {
-			                    window.open(urlSerie);
-			                };
+							notific.onclick = function(e) {
+								window.open(urlSerie);
+							};
 						}
 					});
 				}
 			}
-			$.get("https://github.com/TiagoDanin/BeautifulBDS/raw/master/version", function(data){
+			$.get("https://github.com/TiagoDanin/BeautifulBDS/raw/master/version", function(data) {
 				if (version != data) {
 					Notification.requestPermission().then(status => {
 						if (status == 'granted') {
 							var notific = new Notification(
-								"BeautifulBDS",
-								{
+								"BeautifulBDS", {
 									body: "Há uma nova versão do BeautifulBDS [CLIQUE AQUI]",
 									icon: "https://image.flaticon.com/icons/png/128/254/254010.png"
 								}
 							);
-							notific.onclick = function (e) {
-			                    window.open("https://github.com/TiagoDanin/BeautifulBDS");
-			                };
+							notific.onclick = function(e) {
+								window.open("https://github.com/TiagoDanin/BeautifulBDS");
+							};
 						}
 					});
 				}
@@ -6378,7 +6391,7 @@ a {
 		} else if (e.ctrlKey && e.keyCode == 78) {
 			// Ctrl + n
 			if (themeDark) { // IF ON -> OFF
-				document.cookie = "ThemeDark=true; expires=Thu, 01 Jan 1500 00:00:01 GMT; domain=bancodeseries.com.br; path=/;";
+				document.cookie = "ThemeDark=false; expires=Thu, 01 Jan 1500 00:00:01 GMT; domain=bancodeseries.com.br; path=/;";
 				window.location.reload();
 			} else { //IF OFF -> ON
 				document.cookie = "ThemeDark=true; expires=Thu, 01 Jan 2500 00:00:01 GMT; domain=bancodeseries.com.br; path=/;";
@@ -6445,7 +6458,7 @@ a {
 					var adminGrupo = `Admins do grupo</b>
 					<br><strong><small><a href="index.php?action=userPage&amp;uid=1000038754"><font color="green">Jefferson Fernandes</font></a></small>
 					<br><strong><small><a href="index.php?action=userPage&amp;uid=1000123508"><font color="green">Manoel Barreto</font></a></small>
-					<br><strong><small><font color="green">Ju</font></a></small><hr>
+					<br><strong><small><a href="index.php?action=userPage&amp;uid=1000050518"><font color="green">Juliana</font></a></small><hr>
 					</strong><b>Meus Grupos</b>`;
 					spanTwo.innerHTML = (spanTwo.innerHTML).replace("Meus Grupos", adminGrupo);
 				}

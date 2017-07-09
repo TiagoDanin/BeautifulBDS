@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "BeautifulBDS",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Um Tema Flat, Limpo e algumas utilidades para o site BancoDeSéries ❤",
   "browser_action": {
     "default_icon": "img/logo.png"
@@ -14,4 +14,4 @@
     "js": ["thirdParty/jquery-3.2.1.min.js", "BeautifulBDS.js"],
     "matches": ["http://bancodeseries.com.br/*"]
   }]
-} 
+}
