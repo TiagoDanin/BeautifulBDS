@@ -48,12 +48,12 @@ Aceito novas sugestões [aqui](https://github.com/TiagoDanin/BeautifulBDS/issues
 --------------------
 # Screenshots
 
-![Screenshots](https://raw.githubusercontent.com/TiagoDanin/BeautifulBDS/master/Screenshots/1IMG.png)
+![Screenshots](https://github.com/TiagoDanin/BeautifulBDS/raw/master/Screenshots/1IMG%20.png)
 
-![Screenshots](https://raw.githubusercontent.com/TiagoDanin/BeautifulBDS/master/Screenshots/2IMG.png)
+![Screenshots](https://github.com/TiagoDanin/BeautifulBDS/raw/master/Screenshots/2IMG%20.png)
 
-![Screenshots](https://raw.githubusercontent.com/TiagoDanin/BeautifulBDS/master/Screenshots/3IMG.png)
+![Screenshots](https://github.com/TiagoDanin/BeautifulBDS/raw/master/Screenshots/3IMG%20.png)
 
-![Screenshots](https://raw.githubusercontent.com/TiagoDanin/BeautifulBDS/master/Screenshots/4IMG.png)
+![Screenshots](https://github.com/TiagoDanin/BeautifulBDS/raw/master/Screenshots/4IMG%20.png)
 
-![Screenshots](https://raw.githubusercontent.com/TiagoDanin/BeautifulBDS/master/Screenshots/5IMG.png)
+![Screenshots](https://github.com/TiagoDanin/BeautifulBDS/raw/master/Screenshots/5IMG%20.png)
