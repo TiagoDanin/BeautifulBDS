@@ -1,6 +1,9 @@
 # BeautifulBDS
 Um Tema Flat, Limpo e algumas utilidades para o site BancoDeSéries ❤️
 
+# Atualização
+É necessário baixa a extensão novamente para atualiza.
+
 # Como instalar
 0. Funciona com Chrome, Opera e Vivaldi
 1. Faça o download da Extensão [aqui](https://github.com/TiagoDanin/BeautifulBDS/raw/master/BeautifulBDS.crx)
@@ -57,3 +60,5 @@ Aceito novas sugestões [aqui](https://github.com/TiagoDanin/BeautifulBDS/issues
 ![Screenshots](https://github.com/TiagoDanin/BeautifulBDS/raw/master/Screenshots/4IMG%20.png)
 
 ![Screenshots](https://github.com/TiagoDanin/BeautifulBDS/raw/master/Screenshots/5IMG%20.png)
+
+PS¹: Não uso adblocks no BDS, só tirei os anúncios para tira a screenshot :)
