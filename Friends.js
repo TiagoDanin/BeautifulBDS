@@ -1,8 +1,8 @@
 (function() {
 	var divFriends = document.getElementById("divFriends");
 	if (divFriends) {
-		(divFriends.getElementsByTagName("button")[0]).click()
-		$("#showfriends").click(function() {
+		uid=$("#showfriends").data('src');
+		$("#divFriends").load("http://bancodeseries.com.br/ajaxrequest.php?context=showFriends&uid="+uid, function() {
 			var urlsFriends = divFriends.getElementsByTagName("a");
 			if (urlsFriends) {
 				var htmlFriends = "<div id=\"attFriends\" class=\"pre-scrollable5\"><hr><b>Últimas Atualizações de Amigos</b><br><br><div id=\"attFriends\" class=\"re-scrollable5 pre-scrollable3\"></div></div>";
