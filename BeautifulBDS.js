@@ -1,6 +1,5 @@
 (function() {
 	var themeDark = document.cookie.includes("ThemeDark");
-	var version = "2.1.0";
 	var content = document.getElementsByClassName("container-fluid")[0];
 	var accordionHeading = document.getElementsByClassName("accordion-heading");
 	if (themeDark && accordionHeading) {
