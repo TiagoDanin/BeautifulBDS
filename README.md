@@ -1,6 +1,11 @@
 # BeautifulBDS
 Um Tema Flat, Limpo e algumas utilidades para o site BancoDeSéries ❤️
 
+# Canal no [Telegram @BeautifulBDS](https://t.me/BeautifulBDS)
+- Novas Atualizações
+- Donwload de versão betas
+- Etc
+
 # Atualização
 É necessário baixa a extensão novamente para atualiza.
 
@@ -60,5 +65,7 @@ Aceito novas sugestões [aqui](https://github.com/TiagoDanin/BeautifulBDS/issues
 ![Screenshots](https://github.com/TiagoDanin/BeautifulBDS/raw/master/Screenshots/4IMG%20.png)
 
 ![Screenshots](https://github.com/TiagoDanin/BeautifulBDS/raw/master/Screenshots/5IMG%20.png)
+
+![Screenshots](https://github.com/TiagoDanin/BeautifulBDS/raw/master/Screenshots/6IMG%20.png)
 
 PS¹: Não uso adblocks no BDS, só tirei os anúncios para tira a screenshot :)
