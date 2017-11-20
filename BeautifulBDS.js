@@ -103,4 +103,7 @@
 		document.cookie = "notificCheckDay=true; expires=" + DateCookie.toGMTString() + "; domain=bancodeseries.com.br; path=/;";
 		NotificSeries();
 	}
+
+
+	
 })();

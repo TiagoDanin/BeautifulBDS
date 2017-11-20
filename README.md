@@ -1,11 +1,6 @@
 # BeautifulBDS
 Um Tema Flat, Limpo e algumas utilidades para o site BancoDeSéries ❤️
 
-# Canal no [Telegram @BeautifulBDS](https://t.me/BeautifulBDS)
-- Novas Atualizações
-- Donwload de versão betas
-- Etc
-
 # Atualização
 É necessário baixa a extensão novamente para atualiza.
 
