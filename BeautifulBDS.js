@@ -115,7 +115,7 @@
 	var containerTop = document.getElementsByClassName('container-fluid')
 	if (containerTop) {
 		var topTable = containerTop[0].getElementsByClassName("table-bordered")
-		if (topTable) {
+		if (topTable && topTable[1]) {
 			var subTopTable = topTable[1].getElementsByTagName('tr')
 			if (subTopTable) {
 				for (var i = 0; i < subTopTable.length; i++) {
@@ -141,5 +141,18 @@
 		}
 	}
 
+/* SOON var h5 = document.getElementsByTagName('h5')
+for (var i = 0; i < h5.length; i++) {
+	if ((h5[i].innerText).startsWith('Não estrearam')) {
+		var noEstrearam = Number(((h5[i].innerText).replace('Não estrearam (', '')).replace(')', ''))
+		var strong = document.getElementsByTagName('strong')
+		for (var i = 0; i < strong.length; i++) {
+			if ((strong[i].innerText).startsWith('Ativas (')) {
+				var seAtivas = Number(((strong[i].innerText).replace('Ativas (', '')).replace(')', ''))
+				strong[i].innerHTML = '<strong>Ativas (' + String(Number(seAtivas - noEstrearam)) + ')</strong>'
+			}
+		}
+	}
+}*/
 
 })();

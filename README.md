@@ -25,6 +25,7 @@ Ctrl + h | Exibe novamente todas as notificações do dia |
 
 Atalhos na barra de navegação
 - [x] Grupos
+- [x] Top Canal (Veja em top 10 e top100)
 
 Modificações visual
 - [x] Lista de admins em um grupo (Apenas nos grupos Legends e House)
@@ -34,7 +35,7 @@ Atalhos no ep de uma série
 
 Modificações visual
 - [x] Modo noite (Ativa/Desativa Ctrl + n)
-- [ ] Logo com fundo transparente
+- [ ] Logo com fundo transparente (Usando o do BDS)
 
 Notificação
 - [X] Episodios de hoje
