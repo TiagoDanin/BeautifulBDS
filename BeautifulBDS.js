@@ -104,6 +104,42 @@
 		NotificSeries();
 	}
 
+	var tableChannelTop = `<h3>Top Canal</h3>
+		<table class="table table-condensed table-bordered">
+			<tbody>
+				<tr>
+					<th>Canal</th><th>Séries</th>
+				</tr>
+	`
+	var channelTop = []
+	var containerTop = document.getElementsByClassName('container-fluid')
+	if (containerTop) {
+		var topTable = containerTop[0].getElementsByClassName("table-bordered")
+		if (topTable) {
+			var subTopTable = topTable[1].getElementsByTagName('tr')
+			if (subTopTable) {
+				for (var i = 0; i < subTopTable.length; i++) {
+					if (i != 0) {
+						if (channelTop[subTopTable[i].getElementsByTagName('td')[2].innerText]) {
+							channelTop[subTopTable[i].getElementsByTagName('td')[2].innerText] += 1
+						} else {
+							channelTop[subTopTable[i].getElementsByTagName('td')[2].innerText] = 1
+						}
+					}
+				}
+				for(var index in channelTop) {
+					totalChannel = channelTop[index]
+					tableChannelTop += "<tr><td>" + String(index) + "</td><td>" + String(totalChannel) + "</td></tr>"
+				}
+				tableChannelTop += `		</tbody>
+					</table>
+				`
+				if (containerTop[0].getElementsByClassName('span2') && containerTop[0].getElementsByClassName('span2')[0]) {
+					containerTop[0].getElementsByClassName('span2')[0].innerHTML += tableChannelTop
+				}
+			}
+		}
+	}
 
-	
+
 })();
