@@ -4,6 +4,8 @@ Um Tema Flat, Limpo e algumas utilidades para o site BancoDeSéries ❤️
 # Atualização
 É necessário baixa a extensão novamente para atualiza.
 
+Receba pelo Telegram: https://t.me/joinchat/AAAAAElNWQ-jQtCT6UhpJg
+
 # Como instalar
 0. Funciona com Chrome, Opera e Vivaldi
 1. Faça o download da Extensão [aqui](https://github.com/TiagoDanin/BeautifulBDS/raw/master/BeautifulBDS.crx)
