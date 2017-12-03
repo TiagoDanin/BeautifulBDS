@@ -37,6 +37,7 @@ Atalhos no ep de uma série
 
 Modificações visual
 - [X] Modo noite (Ativa/Desativa Ctrl + n)
+- 
 - [ ] Logo com fundo transparente (Usando o do BDS)
 
 Notificação
