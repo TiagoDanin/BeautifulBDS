@@ -19,11 +19,11 @@ Receba pelo Telegram: https://t.me/joinchat/AAAAAElNWQ-jQtCT6UhpJg
 
 Teclas | Atalho |
 -|- |
-Ctrl + g | Adicionar/Cancelar da minha grade |
-Ctrl + p | Adicionar/Remove da Geladeira |
-Ctrl + m | Iniciar/Finalizar Maratona |
-Ctrl + n | Ativa/Desativa Modo noite |
-Ctrl + h | Exibe novamente todas as notificações do dia |
+Shift + g | Adicionar/Cancelar da minha grade |
+Shift + p | Adicionar/Remove da Geladeira |
+Shift + m | Iniciar/Finalizar Maratona |
+Shift + n | Ativa/Desativa Modo noite |
+Shift + h | Exibe novamente todas as notificações do dia |
 
 Atalhos na barra de navegação
 - [X] Grupos
@@ -36,14 +36,12 @@ Atalhos no ep de uma série
 - [ ] Busca legenda
 
 Modificações visual
-- [X] Modo noite (Ativa/Desativa Ctrl + n)
-- 
-- [ ] Logo com fundo transparente (Usando o do BDS)
+- [X] Modo noite (Ativa/Desativa Shift + n)
+
+- [X] Logo com fundo transparente
 
 Notificação
 - [X] Episodios de hoje
-- [ ] Solicitação de amizade
-- [ ] Novo badge
 
 --------------------
 - [ ] Feito

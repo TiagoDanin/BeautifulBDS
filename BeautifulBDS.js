@@ -14,11 +14,11 @@
 		}
 	}
 	document.addEventListener('keydown', function(e) {
-		if (e.ctrlKey && e.keyCode == 72) {
-			// Ctrl + h
+		if (e.shiftKey && e.keyCode == 72) {
+			// Shift + h
 			NotificSeries();
-		} else if (e.ctrlKey && e.keyCode == 78) {
-			// Ctrl + n
+		} else if (e.shiftKey && e.keyCode == 78) {
+			// Shift + n
 			if (themeDark) { // IF ON -> OFF
 				document.cookie = "ThemeDark=true; expires=Thu, 01 Jan 1500 00:00:01 GMT; domain=bancodeseries.com.br; path=/;";
 				window.location.reload();
@@ -35,18 +35,18 @@
 						serieNaGrade = true;
 					}
 					if (spanTwo.getElementsByClassName("btn").length == 5 || spanTwo.getElementsByClassName("btn").length == 4) {
-						if (e.ctrlKey && e.keyCode == 71) {
-							//ctrl + g
+						if (e.shiftKey && e.keyCode == 71) {
+							//Shift + g
 							spanTwo.getElementsByClassName('btn')[0].click();
-						} else if (e.ctrlKey && e.keyCode == 80) {
-							//ctrl + p
+						} else if (e.shiftKey && e.keyCode == 80) {
+							//Shift + p
 							if (serieNaGrade) {
 								spanTwo.getElementsByClassName('btn')[2].click();
 							} else {
 								spanTwo.getElementsByClassName('btn')[1].click();
 							}
-						} else if (e.ctrlKey && e.keyCode == 77) {
-							//ctrl + m
+						} else if (e.shiftKey && e.keyCode == 77) {
+							//Shift + m
 							if (serieNaGrade) {
 								spanTwo.getElementsByClassName('btn')[3].click();
 							} else {
