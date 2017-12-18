@@ -6318,7 +6318,9 @@ a {
 	var body = document.getElementsByTagName("body");
 	body[0].appendChild(style);
 	document.getElementsByTagName("img")[0].src = "https://image.flaticon.com/icons/png/128/254/254010.png";
+	document.getElementsByTagName('link')[3].href = "https://image.flaticon.com/icons/png/128/254/254010.png";
 	document.getElementsByTagName("img")[0].width = "20";
 	document.getElementsByTagName("img")[0].style = "border-radius: 0;";
 	document.getElementsByClassName("navbar")[0].style.position = "Fixed";
+	document.getElementsByTagName('title')[0].innerText = (document.getElementsByTagName('title')[0].innerText).replace('Banco de Séries', 'BDS');
 })();
