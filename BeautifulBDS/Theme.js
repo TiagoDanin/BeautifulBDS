@@ -3149,6 +3149,8 @@ tbody.collapse.in {
 	outline: 0
 }
 .dropdown-menu {
+	height: 200px;
+	overflow: auto;
 	position: absolute;
 	top: 100%;
 	left: 0;
