@@ -1,4 +1,4 @@
-(function() {
+(async function() {
 	var divFriends = document.getElementById("divFriends");
 	var limitFriends = 5;
 	if (divFriends) {
@@ -21,12 +21,14 @@
 							var friendsId = urlImg.replace("http://bancodeseries.com.br/images/users/", "")
 							var tFriend = doc.getElementsByTagName("tbody")[2].getElementsByClassName("pre-scrollable5")[0];
 							var list = tFriend.getElementsByTagName("strong");
-							for (var i = 0; i < (list.length - 1); i++) {
-								if (list[i].innerText.slice(0, 5) == moment().format("DD/MM")) {
-									var att = document.createElement("div")
-									var img = "<img src=\"http://bancodeseries.com.br/images/users/25x25/" + friendsId + "\" width=\"13px\" height=\"13px\">"
-									att.innerHTML = "<small><strong>" + img + list[i].innerHTML + "</small></strong>";
-									divAttFriends.appendChild(att);
+							if (list) {
+								for (var i = 0; i < (list.length - 1); i++) {
+									if (list[i].innerText.slice(0, 5) == moment().format("DD/MM")) {
+										var att = document.createElement("div")
+										var img = "<img src=\"http://bancodeseries.com.br/images/users/25x25/" + friendsId + "\" width=\"13px\" height=\"13px\">"
+										att.innerHTML = "<small><strong>" + img + list[i].innerHTML + "</small></strong>";
+										divAttFriends.appendChild(att);
+									}
 								}
 							}
 						});

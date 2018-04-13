@@ -113,7 +113,7 @@
 	`
 	var channelTop = []
 	var containerTop = document.getElementsByClassName('container-fluid')
-	if (containerTop) {
+	if (containerTop && containerTop[0]) {
 		var topTable = containerTop[0].getElementsByClassName("table-bordered")
 		if (topTable && topTable[1]) {
 			var subTopTable = topTable[1].getElementsByTagName('tr')
@@ -161,5 +161,4 @@
 			}
 		}
 	}
-
 })();

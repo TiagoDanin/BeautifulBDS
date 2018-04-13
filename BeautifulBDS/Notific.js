@@ -1,4 +1,4 @@
-function NotificSeries() {
+async function NotificSeries() {
 	Notification.requestPermission().then(status => {
 		if (status == "granted") {
 			$.get("http://bancodeseries.com.br/index.php?action=thisweek", function(data) {
