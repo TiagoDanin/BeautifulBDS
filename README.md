@@ -12,7 +12,7 @@ Receba pelo Telegram: https://t.me/joinchat/AAAAAElNWQ-jQtCT6UhpJg
 2. Segure e araste o arquivo para dentro da pagina de extensão do seu navegador ou [Veja esse Tutorial do Tecmundo](https://www.tecmundo.com.br/tutorial/26055-google-chrome-como-instalar-extensoes-que-nao-estao-na-web-store.htm)
 3. Clique em instalar
 4. Pronto seja feliz :)
-5. [Ir para o BancoDeSéries](http://bancodeseries.com.br)
+5. [Ir para o BancoDeSéries](https://bancodeseries.com.br)
 
 # Atalhos & Funções
 - [x] Teclado:
@@ -22,8 +22,8 @@ Teclas | Atalho |
 Shift + g | Adicionar/Cancelar da minha grade |
 Shift + p | Adicionar/Remove da Geladeira |
 Shift + m | Iniciar/Finalizar Maratona |
-Shift + n | Ativa/Desativa Modo noite |
-Shift + h | Exibe novamente todas as notificações do dia |
+Ctrl + Shift + a | Ativa/Desativa Modo noite |
+Ctrl + Shift + h | Exibe novamente todas as notificações do dia |
 
 Atalhos na barra de navegação
 - [X] Grupos

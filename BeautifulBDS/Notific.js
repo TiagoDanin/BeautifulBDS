@@ -1,7 +1,7 @@
 async function NotificSeries() {
 	Notification.requestPermission().then(status => {
 		if (status == "granted") {
-			$.get("http://bancodeseries.com.br/index.php?action=thisweek", function(data) {
+			$.get("https://bancodeseries.com.br/index.php?action=thisweek", function(data) {
 				var doc = document.implementation.createHTMLDocument("");
 				doc.open();
 				doc.write(data);
@@ -17,7 +17,7 @@ async function NotificSeries() {
 						var notific = new Notification(
 							serienName, {
 								body: serieEpName,
-								icon: imgSerie
+								icon: 'https://bancodeseries.com.br/' + imgSerie
 							}
 						);
 						notific.onclick = function(e) {
