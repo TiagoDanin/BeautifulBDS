@@ -1,24 +1,34 @@
 {
 	"manifest_version": 2,
 	"name": "BeautifulBDS",
-	"version": "2.3.3",
+	"version": "2.4.0",
 	"description": "Um Tema Flat, Limpo e algumas utilidades para o site BancoDeSéries ❤",
 	"browser_action": {
-		"default_icon": "img/logo.png"
+		"default_icon": "img/logo.png",
+		"default_popup": "Popup.html"
 	},
 	"icons": {
 		"19": "img/logo.png"
 	},
-	"permissions": ["http://bancodeseries.com.br/*", "https://bancodeseries.com.br/*"],
-	"content_scripts": [{
-		"js": [
-			"thirdParty/jquery-3.2.1.min.js",
-			"thirdParty/moment.min.js",
-			"Theme.js",
-			"Notific.js",
-			"BeautifulBDS.js",
-			"Friends.js"
-		],
-		"matches": ["http://bancodeseries.com.br/*", "https://bancodeseries.com.br/*"]
-	}]
+	"permissions": [
+		"http://bancodeseries.com.br/*",
+		"https://bancodeseries.com.br/*"
+	],
+	"content_scripts": [
+		{
+			"js": [
+				"thirdParty/jquery-3.2.1.min.js",
+				"thirdParty/moment.min.js",
+				"Theme.js",
+				"Notific.js",
+				"BeautifulBDS.js",
+				"Friends.js",
+				"TopChannel.js"
+			],
+			"matches": [
+				"http://bancodeseries.com.br/*",
+				"https://bancodeseries.com.br/*"
+			]
+		}
+	]
 }

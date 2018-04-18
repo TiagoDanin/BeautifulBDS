@@ -1,4 +1,4 @@
-(function() {
+(async function() {
 	var themeDark = document.cookie.includes("ThemeDark");
 	var content = document.getElementsByClassName("container-fluid")[0];
 	var accordionHeading = document.getElementsByClassName("accordion-heading");
@@ -14,11 +14,11 @@
 		}
 	}
 	document.addEventListener('keydown', function(e) {
-		if (e.shiftKey && e.keyCode == 72) {
-			// Shift + h
+		if (e.CtrlKey && e.shiftKey && e.keyCode == 72) {
+			// Ctrl + Shift + h
 			NotificSeries();
-		} else if (e.shiftKey && e.keyCode == 78) {
-			// Shift + n
+		} else if (e.CtrlKey && e.shiftKey && e.keyCode == 65) {
+			// Ctrl + Shift + a
 			if (themeDark) { // IF ON -> OFF
 				document.cookie = "ThemeDark=true; expires=Thu, 01 Jan 1500 00:00:01 GMT; domain=bancodeseries.com.br; path=/;";
 				window.location.reload();
@@ -66,14 +66,14 @@
 		var grupoImg = document.createElement("img");
 		grupoUrl.href = breadcrumb.getElementsByTagName("a")[i].href;
 		//grupoUrl.textContent = ((breadcrumb.getElementsByTagName("small")[i]).getElementsByTagName("font")[0]).textContent;
-		grupoImg.src = "images/groups/" + (breadcrumb.getElementsByTagName("a")[i].href).replace("http://bancodeseries.com.br/index.php?action=group&gid=", "") + ".jpg";
+		grupoImg.src = "images/groups/" + (breadcrumb.getElementsByTagName("a")[i].href).replace("https://bancodeseries.com.br/index.php?action=group&gid=", "") + ".jpg";
 		grupoImg.width = "20";
 		grupoUrl.appendChild(grupoImg);
 		grupoMenu.appendChild(grupoUrl);
 		nav.appendChild(grupoMenu);
 	}
 	var url = window.location.href;
-	var idGrupo = url.replace("http://bancodeseries.com.br/index.php?action=group&gid=", "");
+	var idGrupo = url.replace(/http[s]*:\/\//i, '').replace("bancodeseries.com.br/index.php?action=group&gid=", "");
 	if (idGrupo.length == 1) {
 		if (content) {
 			var spanTwo = content.getElementsByClassName("span2")[0];
@@ -102,43 +102,6 @@
 		DateCookie.setMinutes(0);
 		document.cookie = "notificCheckDay=true; expires=" + DateCookie.toGMTString() + "; domain=bancodeseries.com.br; path=/;";
 		NotificSeries();
-	}
-
-	var tableChannelTop = `<h3>Top Canal</h3>
-		<table class="table table-condensed table-bordered">
-			<tbody>
-				<tr>
-					<th>Canal</th><th>Séries</th>
-				</tr>
-	`
-	var channelTop = []
-	var containerTop = document.getElementsByClassName('container-fluid')
-	if (containerTop && containerTop[0]) {
-		var topTable = containerTop[0].getElementsByClassName("table-bordered")
-		if (topTable && topTable[1]) {
-			var subTopTable = topTable[1].getElementsByTagName('tr')
-			if (subTopTable) {
-				for (var i = 0; i < subTopTable.length; i++) {
-					if (i != 0) {
-						if (channelTop[subTopTable[i].getElementsByTagName('td')[2].innerText]) {
-							channelTop[subTopTable[i].getElementsByTagName('td')[2].innerText] += 1
-						} else {
-							channelTop[subTopTable[i].getElementsByTagName('td')[2].innerText] = 1
-						}
-					}
-				}
-				for(var index in channelTop) {
-					totalChannel = channelTop[index]
-					tableChannelTop += "<tr><td>" + String(index) + "</td><td>" + String(totalChannel) + "</td></tr>"
-				}
-				tableChannelTop += `		</tbody>
-					</table>
-				`
-				if (containerTop[0].getElementsByClassName('span2') && containerTop[0].getElementsByClassName('span2')[0]) {
-					containerTop[0].getElementsByClassName('span2')[0].innerHTML += tableChannelTop
-				}
-			}
-		}
 	}
 
 	var gradeTable = document.getElementsByClassName('tabbable')
