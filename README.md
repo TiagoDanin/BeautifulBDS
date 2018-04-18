@@ -22,8 +22,8 @@ Teclas | Atalho |
 Shift + g | Adicionar/Cancelar da minha grade |
 Shift + p | Adicionar/Remove da Geladeira |
 Shift + m | Iniciar/Finalizar Maratona |
-Ctrl + Shift + a | Ativa/Desativa Modo noite |
-Ctrl + Shift + h | Exibe novamente todas as notificações do dia |
+Ctrl + z | Ativa/Desativa Modo noite |
+Ctrl + x | Exibe novamente todas as notificações do dia |
 
 Atalhos na barra de navegação
 - [X] Grupos

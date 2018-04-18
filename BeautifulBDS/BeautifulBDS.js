@@ -14,11 +14,11 @@
 		}
 	}
 	document.addEventListener('keydown', function(e) {
-		if (e.CtrlKey && e.shiftKey && e.keyCode == 72) {
-			// Ctrl + Shift + h
+		if (e.ctrlKey && e.keyCode == 88) {
+			// Ctrl + x
 			NotificSeries();
-		} else if (e.CtrlKey && e.shiftKey && e.keyCode == 65) {
-			// Ctrl + Shift + a
+		} else if (e.ctrlKey && e.keyCode == 90) {
+			// Ctrl + z
 			if (themeDark) { // IF ON -> OFF
 				document.cookie = "ThemeDark=true; expires=Thu, 01 Jan 1500 00:00:01 GMT; domain=bancodeseries.com.br; path=/;";
 				window.location.reload();
