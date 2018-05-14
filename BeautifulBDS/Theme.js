@@ -692,7 +692,7 @@ html {
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
-	line-height: 1.42857;
+	/* line-height: 1.42857; */
 	color: #333;
 	background-color: #fff
 }
@@ -3091,7 +3091,9 @@ fieldset[disabled] .btn-link:focus {
 	width: 100%
 }
 .btn-block+.btn-block {
-	margin-top: 5px
+	margin-top: 5px;
+	display: inline-flex;
+}
 }
 input[type="submit"].btn-block,
 input[type="reset"].btn-block,
@@ -6268,6 +6270,9 @@ button.close {
 	margin-left: 0px;
 	margin-right: 0px;
 }
+.thumbnails>li {
+	margin-left: 20px;
+}
 `;
 	var themeDark = document.cookie.includes("ThemeDark");
 	if (themeDark) {
@@ -6275,7 +6280,7 @@ button.close {
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
-	line-height: 1.42857;
+	/* line-height: 1.42857; */
 	color: #f3f3f3;
 	background-color: #222;
 }
