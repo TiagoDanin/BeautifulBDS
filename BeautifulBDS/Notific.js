@@ -17,7 +17,7 @@ async function NotificSeries() {
 						var notific = new Notification(
 							serienName, {
 								body: serieEpName,
-								icon: 'https://bancodeseries.com.br/' + imgSerie
+								icon: 'https://bancodeseries.com.br/images/posters/' + imgSerie.replace('images/tvdb/graphical/half/', '')
 							}
 						);
 						notific.onclick = function(e) {
