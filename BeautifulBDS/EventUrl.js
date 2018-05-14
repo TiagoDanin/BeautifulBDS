@@ -13,6 +13,10 @@
 				}
 			})
 			orderList(href.replace(/&order=.+/i, ''), order)
+		} else if (paths[0] == '?action=checkvanityprofile') {
+			if (paths[1] == 'screen=assiduidade') {
+				assiduidade(paths[2].replace(/id=/i, ''))
+			}
 		}
 	}
 })()

@@ -108,25 +108,4 @@
 		document.cookie = "notificCheckDay=true; expires=" + DateCookie.toGMTString() + "; domain=bancodeseries.com.br; path=/;";
 		NotificSeries()
 	}
-
-	var gradeTable = document.getElementsByClassName('tabbable')
-	if (gradeTable && gradeTable.length == 1) {
-		var h5 = gradeTable[0].getElementsByTagName('h5')
-		for (var i = 0; i < h5.length; i++) {
-			if ((h5[i].innerText).startsWith('Não estrearam')) {
-				var noEstrearam = Number(((h5[i].innerText).replace('Não estrearam (', '')).replace(')', ''))
-				var navBarGrade = gradeTable[0].getElementsByClassName('nav-tabs')
-				if (navBarGrade) {
-					var strong = navBarGrade[0].getElementsByTagName('strong')
-					for (var i = 0; i < strong.length; i++) {
-						if ((strong[i].innerText).startsWith('Ativas (')) {
-							var seAtivas = Number(((strong[i].innerText).replace('Ativas (', '')).replace(')', ''))
-							var novoTotalDeAtivas = (seAtivas - noEstrearam)
-							strong[i].innerHTML = 'Ativas ('+ String(novoTotalDeAtivas) + ')'
-						}
-					}
-				}
-			}
-		}
-	}
 })()
