@@ -13,10 +13,8 @@
 					if (i < limitFriends) {
 						var urlFri = urlsFriends[i].href;
 						$.get(urlFri, function(data) {
-							var doc = document.implementation.createHTMLDocument("");
-							doc.open();
-							doc.write(data);
-							doc.close();
+							var doc = document.implementation.createHTMLDocument("").body
+							doc.innerHTML = data
 							var urlImg = doc.getElementsByClassName("span2")[1].getElementsByTagName("img")[0].src;
 							var friendsId = urlImg.replace(/http[s]*:\/\//i, '').replace("bancodeseries.com.br/images/users/", "")
 							var tFriend = doc.getElementsByTagName("tbody")[3].getElementsByClassName("pre-scrollable5")[0];

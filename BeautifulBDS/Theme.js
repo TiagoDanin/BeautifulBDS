@@ -6273,6 +6273,9 @@ button.close {
 .thumbnails>li {
 	margin-left: 20px;
 }
+.tab-content {
+	overflow: unset;
+}
 `;
 	var themeDark = document.cookie.includes("ThemeDark");
 	if (themeDark) {

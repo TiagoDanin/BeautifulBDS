@@ -2,10 +2,8 @@ async function NotificSeries() {
 	Notification.requestPermission().then(status => {
 		if (status == "granted") {
 			$.get("https://bancodeseries.com.br/index.php?action=thisweek", function(data) {
-				var doc = document.implementation.createHTMLDocument("");
-				doc.open();
-				doc.write(data);
-				doc.close();
+				var doc = document.implementation.createHTMLDocument("").body
+				doc.innerHTML = data
 				var tableGrade = doc.getElementsByTagName("table")[1];
 				if (tableGrade) {
 					var serieHoje = tableGrade.getElementsByClassName("info");
