@@ -6,13 +6,21 @@ Um Tema Flat, Limpo e algumas utilidades para o site BancoDeSéries ❤️
 
 Receba pelo Telegram: https://t.me/joinchat/AAAAAElNWQ-jQtCT6UhpJg
 
-# Como instalar
+# Como instalar (Nos melhores navegadores)
 0. Funciona com Chrome, Opera e Vivaldi
 1. Faça o download da Extensão [aqui](https://github.com/TiagoDanin/BeautifulBDS/raw/master/BeautifulBDS.crx)
 2. Segure e araste o arquivo para dentro da pagina de extensão do seu navegador ou [Veja esse Tutorial do Tecmundo](https://www.tecmundo.com.br/tutorial/26055-google-chrome-como-instalar-extensoes-que-nao-estao-na-web-store.htm)
 3. Clique em instalar
 4. Pronto seja feliz :)
 5. [Ir para o BancoDeSéries](https://bancodeseries.com.br)
+
+# Firefox
+
+https://addons.mozilla.org/pt-BR/firefox/addon/beautifulbds/
+
+# Opera
+
+SOON
 
 # Atalhos & Funções
 - [x] Teclado:
@@ -66,3 +74,7 @@ Aceito novas sugestões [aqui](https://github.com/TiagoDanin/BeautifulBDS/issues
 ![Screenshots](https://github.com/TiagoDanin/BeautifulBDS/raw/master/Screenshots/6IMG%20.png)
 
 PS¹: Não uso adblocks no BDS, só tirei os anúncios para tira a screenshot :)
+
+# Icon
+
+https://www.flaticon.es/icono-gratis/televisores_254010
